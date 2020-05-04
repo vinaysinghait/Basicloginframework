@@ -40,10 +40,8 @@ public class LoginpageSteps extends BaseClass
 	public void user_logsin_using_Email_and_Password(String arg1, String arg2) throws Throwable 
 	{
 		
-		//driver.findElement(By.xpath("//*[@id=\"get_sign_in\"]")).click();
-		//obj=new Loginpage(getDriver());
-		obj=new Loginpage(driver);
-		obj.Signinbuttonclick();
+		obj.signinemail(prop.getProperty("email"), prop.getProperty("Password"));
+		
 	}	
 
 	@Then("^Login must be successfull$")

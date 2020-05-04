@@ -27,6 +27,21 @@ public class Loginpage
 @FindBy (xpath="(//*[@class=\"sign_in_wrapper\"])[2]")
 WebElement Signinbutton;
 
+@FindBy(xpath="//*[@id=\"username\"]")
+WebElement emailid;
+
+@FindBy(xpath="//*[@class=\"bui-button__text\"]")
+WebElement Nextbutton;
+
+@FindBy(xpath="//*[@id=\"password\"]")
+WebElement Passwordfield;
+
+
+@FindBy(xpath="//*[@type=\"submit\"]")
+WebElement Submit;
+
+
+
 public Loginpage(WebDriver driver)
 {
     this.driver=driver;
@@ -44,6 +59,13 @@ public void Signinbuttonclick() throws InterruptedException
 }
 
 
+public void signinemail(CharSequence email, CharSequence Password)
+{
+   emailid.sendKeys(email);
+   Nextbutton.click();
+   Passwordfield.sendKeys(Password);
+   Submit.click();
+}
 
 
 
