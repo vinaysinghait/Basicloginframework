@@ -8,7 +8,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions
 (
-		features="src\\main\\java\\testFeature\\Featurefile.feature", glue = "stepDefinition\\LoginpageSteps",
+		features="src\\main\\java\\testFeature\\loginfeaturefile.feature", glue = "stepDefinition\\LoginpageSteps",
 		//"stepDefinition\\LoginpageSteps",
 		plugin= {"html:target/cucumber-html-report"},
 		dryRun=false

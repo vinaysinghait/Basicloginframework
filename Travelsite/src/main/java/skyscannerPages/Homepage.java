@@ -1,5 +1,6 @@
 package skyscannerPages;
 
-public class Homepage {
+public class Homepage 
+{
 
 }

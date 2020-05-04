@@ -15,16 +15,16 @@ public class BaseClass
 
 {
 	
-	// 
-	private static WebDriver driver;
+	
+	public static WebDriver driver;
 	public static ChromeOptions options;
 	public static Properties prop;
 	
 	
-	 public WebDriver getDriver() 
-	 {
-		    return driver;
-	 }
+//	 public WebDriver getDriver() 
+//     {
+//		    return driver;
+//	 }
 	
 	  
 	public BaseClass() throws IOException
