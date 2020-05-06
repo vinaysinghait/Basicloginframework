@@ -1,6 +1,7 @@
 package stepDefinition;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,7 +17,7 @@ public class LoginpageSteps extends BaseClass
 	
 //	Loginpage obj=new Loginpage(getDriver());
 	Loginpage obj;
-
+    
 
 	public LoginpageSteps() throws IOException 
 	{
@@ -47,7 +48,10 @@ public class LoginpageSteps extends BaseClass
 	@Then("^Login must be successfull$")
 	public void login_must_be_successfull() throws Throwable 
 	{
-	    
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+	    //driver.close();
+		
+		System.out.println("Login is sucessfully passed");
 	}
 	
 
@@ -58,6 +62,15 @@ public void i_click_Sign_in() throws Throwable
 	obj=new Loginpage(driver);
 	obj.Signinbuttonclick();
 }
+
+
+//invalid credential login error message
+@Then("^error message should be displayed$")
+public void error_message_should_be_displayed() throws Throwable 
+{
+    
+}
+
 
 
 	

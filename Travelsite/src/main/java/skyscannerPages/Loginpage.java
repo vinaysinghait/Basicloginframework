@@ -13,15 +13,11 @@ import utilPackage.BaseClass;
 
 
 
-public class Loginpage 
+public class Loginpage extends BaseClass
 {
 
-	WebDriver driver;
+	//WebDriver driver;
 	
-//public Loginpage() throws IOException {
-//		super();
-//		// TODO Auto-generated constructor stub
-//	}
 
 
 @FindBy (xpath="(//*[@class=\"sign_in_wrapper\"])[2]")
@@ -41,14 +37,20 @@ WebElement Passwordfield;
 WebElement Submit;
 
 
+//Sap intialization
+//public Loginpage(WebDriver driver)
+//{
+//    this.driver=driver;
+//    PageFactory.initElements(driver, this);
+////	PageFactory.initElements(driver, Loginpage.class);
+//}
 
-public Loginpage(WebDriver driver)
+public Loginpage(WebDriver driver) throws IOException
 {
-    this.driver=driver;
-    PageFactory.initElements(driver, this);
-//	PageFactory.initElements(driver, Loginpage.class);
-}
 
+    PageFactory.initElements(driver, this);
+
+}
 
 public void Signinbuttonclick() throws InterruptedException
 {
